@@ -10,7 +10,7 @@ def split_before_each_uppercases(formula):
 
 
 def split_at_first_digit(formula):
-    digit_location = 0
+    digit_location = 1
     while digit_location < len(formula) and not formula[digit_location].isdigit():
         digit_location += 1
     if digit_location == len(formula):
