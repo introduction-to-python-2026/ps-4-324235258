@@ -1,13 +1,13 @@
 def split_before_each_uppercases(formula):
     split_formula = []
     start = 0
-    for end, ch in enumerate(formula[1:], start=1):
-        if ch.isupper():
+    for end in range(len(formula)):
+        if end != start and formula[end].isupper():
             split_formula.append(formula[start:end])
             start = end
     split_formula.append(formula[start:])
     return split_formula
-
+    
 def split_at_first_digit(formula):
     digit_location = 1
     while digit_location < len(formula) and not formula[digit_location].isdigit():
